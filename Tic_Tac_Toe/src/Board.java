@@ -17,10 +17,10 @@ public class Board {
 	/** Constructor to create the game board */
 	public Board() {
 		
-		// initialise the cells array using ROWS and COLS constants
+		// initialise the cells array using ROWS and COLS constants that will hold the Cell position
 		cells = new Cell[GameMain.ROWS][GameMain.COLS];
 		
-		
+		// create a new cell object to store in each of the positions in the array
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			
 			for (int col = 0; col < GameMain.COLS; ++col) {
@@ -114,6 +114,7 @@ public class Board {
 					GRID_WIDTH, GRID_WIDTH);
 			
 		}
+		
 		
 		/** draw the cells */
 		for (int row = 0; row < GameMain.ROWS; ++row) {
