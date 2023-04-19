@@ -5,10 +5,10 @@ import java.awt.Graphics2D;
 
 public class Cell {
 	
-	//content of this cell (empty, cross, nought)
+	// content of this cell (empty, cross, nought)
 	Player content;
 	
-	//row and column of this cell
+	// row and column of this cell
 	int row, col;
 	
 	/** Constructor to initialise this cell with the specified row and col */
