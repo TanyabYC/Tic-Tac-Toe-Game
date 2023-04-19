@@ -10,7 +10,7 @@ public class GameMain extends JPanel implements MouseListener {
 	
 	public static final int COLS = 3;
 	
-	public static final String TITLE = "Tic Tac Toe";
+	private static final String TITLE = "Tic Tac Toe";
 	
 
 	/** constants for dimensions used for drawing */	
