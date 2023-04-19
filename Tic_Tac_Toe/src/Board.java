@@ -3,11 +3,11 @@ import java.awt.*;
 public class Board {
 	
 	// grid line width
-	public static final int GRID_WIDTH = 8;
+	private static final int GRID_WIDTH = 8;
 	
 	
 	// grid line half width
-	public static final int GRID_WIDHT_HALF = GRID_WIDTH / 2;
+	private static final int GRID_WIDHT_HALF = GRID_WIDTH / 2;
 	
 	
 	// 2D array of ROWS-by-COLS Cell instances
