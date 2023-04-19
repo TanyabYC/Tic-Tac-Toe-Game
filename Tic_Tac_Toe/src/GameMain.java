@@ -198,8 +198,7 @@ public class GameMain extends JPanel implements MouseListener {
 		
 	/** After each turn check to see if the current player hasWon by putting their symbol in that position, 
 	 * 	If they have the GameState is set to won for that player
-	 * 	If no winner then isDraw is called to see if deadlock, if not GameState stays as PLAYING
-	 *   
+	 * 	If no winner then isDraw is called to see if deadlock, if not GameState stays as PLAYING	 *   
 	 */
 	public void updateGame(Player thePlayer, int row, int col) {
 		
@@ -207,18 +206,33 @@ public class GameMain extends JPanel implements MouseListener {
 		if (board.hasWon(thePlayer, row, col)) {
 				
 			// TODO: check which player has won and update the currentstate to the appropriate gamestate for the winner
-
+			if (thePlayer == Player.Cross) {
+				
+				currentState = GameState.CROSS_WON;
+				
+			}
+			
+			else if (thePlayer == Player.Nought) {
+				
+				currentState = GameState.NOUGHT_WON;
+				
+			}
 				
 		} 
 		
-		else if (board.isDraw ()) {
+		else if (board.isDraw()) {
 					
 			// TODO: set the currentstate to the draw gamestate
 			currentState = GameState.DRAW;
 			
 		}
 		
+		else {
+		
 			// otherwise no change to current state of playing
+			currentState = GameState.PLAYING;
+		
+		}
 		
 	}		
 	
