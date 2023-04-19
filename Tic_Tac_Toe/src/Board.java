@@ -17,9 +17,7 @@ public class Board {
 	/** Constructor to create the game board */
 	public Board() {
 		
-		//TODO: initialise the cells array using ROWS and COLS constants 
-		
-		
+		// initialise the cells array using ROWS and COLS constants		
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			
 			for (int col = 0; col < GameMain.COLS; ++col) {
@@ -33,17 +31,17 @@ public class Board {
 	}
 	
 
-	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
+	/** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() {
-		 
-		// TODO: Check whether the game has ended in a draw. 
-		// Hint: Use a nested loop (see the constructor for an example). Check whether any of the cells content in the board grid are Player.Empty. If they are, it is not a draw.
-		// Hint: Return false if it is not a draw, return true if there are no empty positions left
+		
+		/** check whether the game has ended in a draw */
+		// return false if any of the cells content in the board grid are Player.Empty
+		// return true if there are no empty positions left
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			
 			for (int col = 0; col < GameMain.COLS; ++col) {
 				
-				if (cells[row][col].content == Player.Empty)
+				if (cells[row][col].content == Player.EMPTY)
 					
 					return false;
 				
@@ -63,7 +61,7 @@ public class Board {
 			
 			return true; 
 		
-		 // TODO: Check if the player has 3 in the playerCol.
+		 // check if player has 3-in-that-column
 		 // Hint: Use the row code above as a starting point, remember that it goes cells[row][column] 
 		if (cells[0][playerCol].content == thePlayer && cells[1][playerCol].content == thePlayer && cells[2][playerCol].content == thePlayer)
 			
@@ -76,7 +74,7 @@ public class Board {
 			return true;
 		 
 		
-		// TODO: Check the diagonal in the other direction
+		// 3-in-the-diagonal (in the other direction)
 		if (cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells[2][0].content == thePlayer)
 			
 			return true;
@@ -87,13 +85,12 @@ public class Board {
 		
 	}
 	
-	/**
-	 * Draws the grid (rows then columns) using constant sizes, then call on the
-	 * Cells to paint themselves into the grid
+	/** Draws the grid (rows then columns) using constant sizes, then call on the
+	 * 	Cells to paint themselves into the grid
 	 */
 	public void paint(Graphics g) {
 		
-		//draw the grid
+		/** draw the grid */
 		g.setColor(Color.gray);
 		
 		for (int row = 1; row < GameMain.ROWS; ++row) {
@@ -105,7 +102,7 @@ public class Board {
 					GRID_WIDTH, GRID_WIDTH);
 			
 		}
-		
+			
 		for (int col = 1; col < GameMain.COLS; ++col) {
 			
 			g.fillRoundRect(GameMain.CELL_SIZE * col - GRID_WIDHT_HALF, 0,
@@ -116,7 +113,7 @@ public class Board {
 			
 		}
 		
-		//Draw the cells
+		/** draw the cells */
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			
 			for (int col = 0; col < GameMain.COLS; ++col) {
