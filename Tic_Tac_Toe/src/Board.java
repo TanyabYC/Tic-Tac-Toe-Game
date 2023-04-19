@@ -64,14 +64,13 @@ public class Board {
 			
 			return true; 
 		
-		 // check if player has 3-in-that-column
-		 // Hint: Use the row code above as a starting point, remember that it goes cells[row][column] 
+		// check if player has 3-in-that-column
 		if (cells[0][playerCol].content == thePlayer && cells[1][playerCol].content == thePlayer && cells[2][playerCol].content == thePlayer)
 			
 			return true;
 		
 		
-		 // 3-in-the-diagonal
+		// 3-in-the-diagonal
 		if (cells[0][0].content == thePlayer && cells[1][1].content == thePlayer && cells[2][2].content == thePlayer)
 			
 			return true;

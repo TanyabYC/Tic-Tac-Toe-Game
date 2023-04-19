@@ -2,8 +2,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
-
 public class GameMain extends JPanel implements MouseListener {
 	
 	/** Constants for game */	
@@ -76,10 +74,10 @@ public class GameMain extends JPanel implements MouseListener {
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
 		
 		
-		// TODO: Create a new instance of the game "Board"class. HINT check the variables above for the correct name
+		// create a new instance of the game "Board"class.
 		board = new Board();
 		
-		// TODO: call the method to initialise the game board
+		// call the method to initialise the game board
 		initGame();
 		
 	}
@@ -247,7 +245,7 @@ public class GameMain extends JPanel implements MouseListener {
 		int mouseY = event.getY(); 
 		
 		
-		// Get the row and column clicked		
+		// get the row and column clicked		
 		int rowSelected = mouseY / CELL_SIZE;
 		
 		int colSelected = mouseX / CELL_SIZE;   
@@ -265,7 +263,7 @@ public class GameMain extends JPanel implements MouseListener {
 				updateGame(currentPlayer, rowSelected, colSelected); 
 				
 				
-				// Switch player
+				// switch player
 				if (currentPlayer == Player.CROSS) {
 					
 					currentPlayer =  Player.NOUGHT;
