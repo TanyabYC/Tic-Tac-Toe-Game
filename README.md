@@ -1,2 +1,2 @@
-# BIT504_AT2_Task2
-A simplified Tic-Tac-Toe game
+# Tic-Tac-Toe Game
+Source code for a simplified Tic-Tac-Toe game written in Java.
