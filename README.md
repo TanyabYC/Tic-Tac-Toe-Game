@@ -3,7 +3,7 @@ The project involved taking over from another programmer to complete the build o
 
 The game needed to be a simplified graphical version where a JPanel component needed to be implemented to create a canvas that would allow noughts and crosses to be painted on. Tic-Tac-Toe involves two players taking turns to mark noughts or crosses on a 3x3 grid. The first player to place three of their marks in a horizontal, vertical or diagonal row wins. For this project, crosses always needed to begin. The game needed to check after each move whether a player had won. Players needed to restart the game by clicking any cell after the game ended with a winner or a draw.
 
-The project was completed within 2 weeks for 1 assessment whilst completing the Programming I course at Open Polytechnic NZ as part of the Web Development and Design diploma. The game was built with Java code and comments that explain the approach taken and what the code does was added.
+The project was completed within 1 week for 1 assessment whilst completing the Programming I course at Open Polytechnic NZ as part of the Web Development and Design diploma. The game was built with Java code and comments that explain the approach taken and what the code does was added.
 
 Designing the application involved creating a UML class diagram with the <a href="https://app.diagrams.net/" target="_blank" title="View the diagrams.net application">draw.io</a> application to design each class and indicate the relationship between them.
 
